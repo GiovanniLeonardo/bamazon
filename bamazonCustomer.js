@@ -27,6 +27,7 @@ connection.connect(function(err) {
   
 //start database function
 var productList = function() {
+
     //console log a Welcome message
     console.log("Welcome to my e-store! Enjoy the shopping." + '\n');
 
@@ -35,8 +36,8 @@ var productList = function() {
         if (err) throw err;
 
         // showcase all the inventory items for sale
-        for (let i = 0; i < res.length; i++) {
-            console.table(res);
+        for (var i = 0; i < res.length; i++) {
+           if (i === 1) {break; } console.table(res);
         }
         //call the function userInquire
        userInquire();
